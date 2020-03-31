@@ -1,0 +1,74 @@
+@value Tomato from 'styles/colors.css';
+
+@value padding: 0.75rem;
+@value iconSize: 1.25rem;
+
+.alert {
+	font-size: sizeSM;
+	margin-bottom: 1.5rem;
+	position: relative;
+	min-height: iconSize;
+	padding: padding padding padding calc(iconSize + 1.75 * padding);
+	border-radius: 0.25rem;
+	display: flex;
+	align-items: center;
+	color: Tomato;
+}
+
+.alert a {
+	text-decoration: underline;
+	font-weight: bold;
+	color: inherit;
+}
+
+.alert p {
+	margin: 0 0 1rem;
+}
+
+.content :last-child {
+	margin-bottom: 0;
+}
+
+.danger {
+	composes: alert;
+	background-color: RadishLight;
+}
+
+.info {
+	composes: alert;
+	background-color: BlueberryLight;
+}
+
+.success {
+	composes: alert;
+	background-color: HaricotLight;
+}
+
+.warning {
+	composes: alert;
+	background-color: CarrotLight;
+}
+
+.icon {
+	font-size: iconSize;
+	position: absolute;
+	top: padding;
+	left: padding;
+}
+
+.icon-danger {
+	composes: icon;
+}
+
+.icon-info {
+	composes: icon;
+}
+
+.icon-success {
+	composes: icon;
+}
+
+.icon-warning {
+	composes: icon;
+}
+
